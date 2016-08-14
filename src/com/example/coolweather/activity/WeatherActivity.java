@@ -3,6 +3,7 @@ package com.example.coolweather.activity;
 import java.security.PublicKey;
 
 import com.example.coolweather.R;
+import com.example.coolweather.service.AutoUpdateService;
 import com.example.coolweather.util.HttpCallbacklistener;
 import com.example.coolweather.util.HttpUtil;
 import com.example.coolweather.util.LogUtil;
@@ -186,6 +187,9 @@ public class WeatherActivity extends Activity implements OnClickListener{
 		currentDateText.setText(prefs.getString("current_date", "邱文进"));
 		weatherInfoLayout.setVisibility(View.VISIBLE);
 		cityNameText.setVisibility(View.VISIBLE);
+		
+		Intent intent = new Intent(this, AutoUpdateService.class);
+		startService(intent);
 	}
 
 	

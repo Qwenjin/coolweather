@@ -130,7 +130,7 @@ public class ChooseAreaActivity extends Activity {
 					String countryCode = countryList.get(position).getContryCode();
 					Intent intent = new Intent(ChooseAreaActivity.this, WeatherActivity.class);
 					intent.putExtra("county_code", countryCode);//
-					startActivity(intent);
+					startActivity(intent);	
 					finish();
 				}
 				else {
